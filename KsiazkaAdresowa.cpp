@@ -5,16 +5,22 @@
 #include <algorithm>
 #include <sstream>
 
+
 #include "KsiazkaAdresowa.h"
 
 using namespace std;
+
+KsiazkaAdresowa::KsiazkaAdresowa()
+{
+    string nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
+}
 
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
     uzytkownicy.push_back(uzytkownik);
-   // dopiszUzytkownikaDoPliku(uzytkownik);
+    dopiszUzytkownikaDoPliku(uzytkownik);
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
@@ -22,7 +28,7 @@ void KsiazkaAdresowa::rejestracjaUzytkownika()
 
 Uzytkownik KsiazkaAdresowa::podajDaneNowegoUzytkownika()
 {
-    Uzytkownik uzytkownik;
+    Uzytkownik uzytkownik;KsiazkaAdresowa();
 
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
     string login;
@@ -70,4 +76,57 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
        cout<<uzytkownicy[i].pobierzHaslo()<<endl;
        cout<<uzytkownicy[i].pobierzId()<<endl;
     }
+}
+
+void KsiazkaAdresowa::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
+{
+    fstream plikTekstowy;
+    string liniaZDanymiUzytkownika = "";
+    //plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
+    plikTekstowy.open("Uzytkownicy.txt", ios::app);
+
+    if (plikTekstowy.good() == true)
+    {
+        liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownik);
+
+        if (czyPlikJestPusty(plikTekstowy) == true)
+        {
+            plikTekstowy << liniaZDanymiUzytkownika;
+        }
+        else
+        {
+            plikTekstowy << endl << liniaZDanymiUzytkownika ;
+        }
+    }
+    else
+        cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZUzytkownikami << " i zapisac w nim danych." << endl;
+    plikTekstowy.close();
+}
+
+string KsiazkaAdresowa::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
+{
+    string liniaZDanymiUzytkownika = "";
+
+    liniaZDanymiUzytkownika += konwerjsaIntNaString(uzytkownik.pobierzId())+ '|';
+    liniaZDanymiUzytkownika += uzytkownik.pobierzLogin() + '|';
+    liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
+
+    return liniaZDanymiUzytkownika;
+}
+
+bool KsiazkaAdresowa::czyPlikJestPusty(fstream &plikTekstowy)
+{
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
+}
+
+string KsiazkaAdresowa::konwerjsaIntNaString(int liczba)
+{
+    ostringstream ss;
+    ss << liczba;
+    string str = ss.str();
+    return str;
 }
