@@ -11,10 +11,11 @@ class KsiazkaAdresowa
 UzytkownikMenedzer uzytkownikMenedzer;
 
 
+
 public:
 
 void rejestracjaUzytkownika();
 void wypiszWszystkichUzytkownikow();
-
+KsiazkaAdresowa();
 };
 #endif
