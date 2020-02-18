@@ -14,5 +14,8 @@ void  KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 }
 
 
-
+KsiazkaAdresowa::KsiazkaAdresowa()
+{
+    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+}
 

@@ -24,9 +24,13 @@ class UzytkownikMenedzer
     PlikZUzytkownikami plikZUzytkownikami;
 
 
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+
+
 public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 
 };
 #endif
