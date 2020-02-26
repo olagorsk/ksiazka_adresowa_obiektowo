@@ -13,9 +13,3 @@ void  KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
 
-
-KsiazkaAdresowa::KsiazkaAdresowa()
-{
-    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-}
-
