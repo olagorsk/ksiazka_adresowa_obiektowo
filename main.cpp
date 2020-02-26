@@ -12,11 +12,8 @@ int main()
 // ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
   //  ksiazkaAdresowa.rejestracjaUzytkownika();
 //  ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
+ksiazkaAdresowa.logowanieUzytkownika();
+  ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     return 0;
 }

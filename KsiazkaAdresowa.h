@@ -16,6 +16,7 @@ public:
 void rejestracjaUzytkownika();
 int logowanieUzytkownika();
 void wypiszWszystkichUzytkownikow();
+void zmianaHaslaZalogowanegoUzytkownika();
 KsiazkaAdresowa(string nazwaPlikuZUzytwkonikami): uzytkownikMenedzer(nazwaPlikuZUzytwkonikami){
   uzytkownikMenedzer.wczytajUzytkownikowZPliku();
 };
