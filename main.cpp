@@ -8,10 +8,15 @@ using namespace std;
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt");
- ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-  ksiazkaAdresowa.rejestracjaUzytkownika();
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+// ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+  //  ksiazkaAdresowa.rejestracjaUzytkownika();
+//  ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     return 0;
 }

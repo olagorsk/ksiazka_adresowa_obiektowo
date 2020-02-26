@@ -1,3 +1,10 @@
-
-1|jo|jo|
-2|ana|ana|
+1|nowy|nowy|
+2|nowy1|nowy1|
+3|ola|ola|
+4|magda|magda|
+5|k|k|
+6|l|l|
+7|h|h|
+8|f|f|
+9|r|r|
+10|t|t|
