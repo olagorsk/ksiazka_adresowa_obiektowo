@@ -121,3 +121,11 @@ for (int i=0; i<uzytkownicy.size(); ++i)
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
  }
 
+ int UzytkownikMenedzer::wylogowanieUzytkownika()
+ {
+     idZalogowanegoUzytkownika = 0;
+     cout<<endl<<"Wylogowales sie"<<endl;
+      system("pause");
+return idZalogowanegoUzytkownika;
+ }
+
