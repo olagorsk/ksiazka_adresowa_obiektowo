@@ -28,3 +28,14 @@ void  KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowanieUzytkownika();
 }
+
+int KsiazkaAdresowa::dodajAdresata()
+{
+    adresatMenedzer.dodajAdresata();
+}
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer.wyswietlWszystkichAdresatow();
+}
+

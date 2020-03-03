@@ -75,7 +75,7 @@ int UzytkownikMenedzer::logowanieUzytkownika()
    string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    login = MetodyPomocnicze::wczytajLinie();
+  login = MetodyPomocnicze::wczytajLinie();
 
 for (int i=0; i<uzytkownicy.size(); ++i)
     {
@@ -128,4 +128,9 @@ for (int i=0; i<uzytkownicy.size(); ++i)
       system("pause");
 return idZalogowanegoUzytkownika;
  }
+
+   int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+   {
+       return idZalogowanegoUzytkownika;
+   }
 
