@@ -6,18 +6,32 @@
 
 using namespace std;
 
+int _main()
+{
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
+
+
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+
+    ksiazkaAdresowa.logowanieUzytkownika();
+
+
+    return 0;
+}
+
+
+
+#include "AdresatMenedzer.h"
+
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
-// ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-//ksiazkaAdresowa.rejestracjaUzytkownika();
-//  ksiazkaAdresowa.rejestracjaUzytkownika();
-ksiazkaAdresowa.logowanieUzytkownika();
-  //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
- // ksiazkaAdresowa.wylogowanieUzytkownika();
-  ksiazkaAdresowa.dodajAdresata();
+    AdresatMenedzer adresatMenedzer("Adresaci.txt", 3);
+    // adresatMenedzer.dodajAdresata();
+    // adresatMenedzer.wyswietlWszystkichAdresatow();
+    adresatMenedzer.dodajAdresata();
+    adresatMenedzer.wyswietlWszystkichAdresatow();
 
-  ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     return 0;
+
 }

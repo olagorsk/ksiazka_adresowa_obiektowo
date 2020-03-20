@@ -3,12 +3,12 @@
 
 using namespace std;
 
-AdresatMenedzer::AdresatMenedzer()
+/*AdresatMenedzer::AdresatMenedzer()
  {
      idOstatniegoAdresata = 0;
- }
+ }*/
 
-int AdresatMenedzer::dodajAdresata()
+void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
     system("cls");
@@ -16,46 +16,48 @@ int AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-   // dopiszAdresataDoPliku(adresat);
+    if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
+        cout<<"Dodano adresata"<<endl;
+    else
+        cout<<"Cos poszlo nie tak"<<endl;
+    system("pause");
 
-    return ++idOstatniegoAdresata;
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
+    string imie, nazwisko, numerTelefonu, email, adres;
 
-    adresat.id = ++idOstatniegoAdresata;
-    adresat.idUzytkownika = 0;
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawIdUzytkkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     cout << "Podaj imie: ";
-    adresat.imie = MetodyPomocnicze::wczytajLinie();
-    adresat.imie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.imie);
+    imie = MetodyPomocnicze::wczytajLinie();
+    imie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie);
 
     cout << "Podaj nazwisko: ";
-    adresat.nazwisko = MetodyPomocnicze::wczytajLinie();
-    adresat.nazwisko = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.nazwisko);
+    nazwisko = MetodyPomocnicze::wczytajLinie();
+    nazwisko = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko);
 
     cout << "Podaj numer telefonu: ";
-    adresat.numerTelefonu = MetodyPomocnicze::wczytajLinie();
+    numerTelefonu = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj email: ";
-    adresat.email = MetodyPomocnicze::wczytajLinie();
+    email = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj adres: ";
-    adresat.adres = MetodyPomocnicze::wczytajLinie();
+    adres = MetodyPomocnicze::wczytajLinie();
+
+    adresat.ustawImie(imie);
+    adresat.ustawNazwisko(nazwisko);
+    adresat.ustawNumerTelefonu(numerTelefonu);
+    adresat.ustawEmail(email);
+    adresat.ustawAdres(adres);
 
     return adresat;
 }
 
-string AdresatMenedzer::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
-{
-    if (!tekst.empty())
-    {
-        transform(tekst.begin(), tekst.end(), tekst.begin(), ::tolower);
-        tekst[0] = toupper(tekst[0]);
-    }
-    return tekst;
-}
+
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
@@ -86,7 +88,7 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Numer telefonu:     " << adresat.numerTelefonu << endl;
     cout << "Email:              " << adresat.email << endl;
     cout << "Adres:              " << adresat.adres << endl;
-      cout << "Iduzytkownika:               " << adresat.idUzytkownika << endl;
+    cout << "Iduzytkownika:               " << adresat.idUzytkownika << endl;
 
 }
 

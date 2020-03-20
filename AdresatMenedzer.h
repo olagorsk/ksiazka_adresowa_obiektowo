@@ -8,25 +8,32 @@
 #include <algorithm>
 #include <sstream>
 
-#include "UzytkownikMenedzer.h"
 #include "Adresat.h"
+#include "PlikZAdresatami.h"
 
 class AdresatMenedzer
 {
-    int idOstatniegoAdresata;
+   const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
+
     vector<Adresat>adresaci;
-   // int idZalogowanegoUzytkownika;
-    UzytkownikMenedzer uzytkownikMenedzer;
+
+   PlikZAdresatami plikZAdresatami;
+    Adresat podajDaneNowegoAdresata();
 
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    void wyswietlDaneAdresata(Adresat adresat);
 
 public:
 
-    AdresatMenedzer();
-    int dodajAdresata();
-    Adresat podajDaneNowegoAdresata();
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    :plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    }
+    void dodajAdresata();
+
     void wyswietlWszystkichAdresatow();
-    void wyswietlDaneAdresata(Adresat adresat);
+
 
 };
 
