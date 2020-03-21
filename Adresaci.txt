@@ -1,16 +1,12 @@
 1|1|Jan|Nowak|444000999|jan@nowak.pl|ul. Nowa 1|
 2|1|Ada|Polak|555222111|ada@polak.pl|ul. Polna 1|
 3|1|Ida|Jakas|234000988|ida@jakas.pl|ul. Nowa22|
-4|1|Jacek|Maly|399077890|jacek@maly.pl|ul. Mala 34|
 5|3|Ewa|Cisek|999333666|ewa@cisek.pl|ul. Cisowa 4|
 6|3|Ewa|Nowak|333000987|ewa@nowak.pl|ul. Nowa 1|
 7|3|Karolina|Osa|123455432|kar@osa.pl|ul. Osa 3|
 8|3|Jan|Nowak|333444|nowak@nowak.pl|ul. Nowa 3|
 9|3|Jola|Nowa|888|nowa@nowa.pl|nowy|
-10|1|Nowy|A|3|3|3|
-11|1|T|T|t|t|t|
-12|1|G|G|g|g|g|
-13|2|Jan|Nowak|444|www@eee|nowy adres|
 14|6|Nowy|Adresat|333|eee|eee|
 15|3|Stas|Stas|3dd|d|d|
-16|3|Stas nowy|Tak|4|4|4|
+17|4|Jacek|2|2|2|2|
+18|1|Ola|2|2|2|2|

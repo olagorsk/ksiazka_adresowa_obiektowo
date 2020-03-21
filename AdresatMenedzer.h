@@ -22,7 +22,7 @@ class AdresatMenedzer
 
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     void wyswietlDaneAdresata(Adresat adresat);
-
+    int podajIdWybranegoAdresata();
 public:
 
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
@@ -33,6 +33,8 @@ public:
     void dodajAdresata();
 
     void wyswietlWszystkichAdresatow();
+
+    void usunAdresata();
 
 
 };

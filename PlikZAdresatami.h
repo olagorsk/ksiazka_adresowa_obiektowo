@@ -23,6 +23,8 @@ class PlikZAdresatami
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
 
 
 public:
@@ -36,6 +38,7 @@ public:
     vector<Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
  int pobierzIdOstatniegoAdresata();
  int ustawIdOstatniegoAdresata(int ID);
+ void usunAdresataZPliku(int idAdresata);
 
 };
 #endif

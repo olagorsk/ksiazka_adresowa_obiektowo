@@ -65,10 +65,10 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
 
           stringstream myStream (wejscie);
           if (myStream>>liczba)
-              break;
+              return liczba;
+              else
               cout<<"To nie jest liczba. Wpisz ponownie"<<endl;
 
-          return liczba;
     }
 }
 

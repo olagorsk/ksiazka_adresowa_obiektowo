@@ -50,6 +50,11 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
     uzytkownikMenedzer.czyUzytkownikJestZalogowany();
 }
 
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer->usunAdresata();
+}
+
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
