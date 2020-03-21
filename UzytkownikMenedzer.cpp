@@ -64,18 +64,13 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
     }
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
 
 int UzytkownikMenedzer::logowanieUzytkownika()
 {
-  //  Uzytkownik uzytkownik;
    string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    login = MetodyPomocnicze::wczytajLinie();
+  login = MetodyPomocnicze::wczytajLinie();
 
 for (int i=0; i<uzytkownicy.size(); ++i)
     {
@@ -128,4 +123,16 @@ for (int i=0; i<uzytkownicy.size(); ++i)
       system("pause");
 return idZalogowanegoUzytkownika;
  }
+
+ bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+ {
+     if(idZalogowanegoUzytkownika>0)
+        return true;
+     else return false;
+ }
+
+   int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+   {
+       return idZalogowanegoUzytkownika;
+   }
 
