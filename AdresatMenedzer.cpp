@@ -3,10 +3,6 @@
 
 using namespace std;
 
-/*AdresatMenedzer::AdresatMenedzer()
- {
-     idOstatniegoAdresata = 0;
- }*/
 
 void AdresatMenedzer::dodajAdresata()
 {
@@ -29,7 +25,8 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
     string imie, nazwisko, numerTelefonu, email, adres;
 
-    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata()+1));
+
     adresat.ustawIdUzytkkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     cout << "Podaj imie: ";
     imie = MetodyPomocnicze::wczytajLinie();

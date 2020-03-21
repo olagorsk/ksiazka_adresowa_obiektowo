@@ -2,10 +2,9 @@
 
 using namespace std;
 
-
-
   vector<Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku( int idZalogowanegoUzytkownika)
 {
+
     vector <Adresat> adresaci;
     Adresat adresat;
     int idOstatniegoAdresata = 0;
@@ -36,6 +35,9 @@ using namespace std;
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
 
     }
+   ustawIdOstatniegoAdresata(idOstatniegoAdresata);
+   // cout<<"ID ostatniego adresata wynosi - wczytaj adresatow "<< idOstatniegoAdresata<<endl;
+   // system("pause");
         return adresaci;
 }
 
@@ -160,7 +162,13 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
 
 int PlikZAdresatami::pobierzIdOstatniegoAdresata()
 {
-    cout<<"Id ostatniegto adresata wynosi "<<idOstatniegoAdresata;
+  //  cout<<"Id ostatniegto adresata wynosi "<<idOstatniegoAdresata<<endl;
+    return idOstatniegoAdresata;
+}
+
+int PlikZAdresatami::ustawIdOstatniegoAdresata(int ID)
+{
+    idOstatniegoAdresata = ID;
     return idOstatniegoAdresata;
 }
 

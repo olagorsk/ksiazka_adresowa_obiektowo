@@ -7,3 +7,10 @@
 7|3|Karolina|Osa|123455432|kar@osa.pl|ul. Osa 3|
 8|3|Jan|Nowak|333444|nowak@nowak.pl|ul. Nowa 3|
 9|3|Jola|Nowa|888|nowa@nowa.pl|nowy|
+10|1|Nowy|A|3|3|3|
+11|1|T|T|t|t|t|
+12|1|G|G|g|g|g|
+13|2|Jan|Nowak|444|www@eee|nowy adres|
+14|6|Nowy|Adresat|333|eee|eee|
+15|3|Stas|Stas|3dd|d|d|
+16|3|Stas nowy|Tak|4|4|4|
