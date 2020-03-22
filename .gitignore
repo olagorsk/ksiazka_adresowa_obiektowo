@@ -1,5 +1,5 @@
 02_ks_obiekt.*
 bin/
 obj/
-Uzytkownicy.txt
+*.txt
 ks_uml.uxf

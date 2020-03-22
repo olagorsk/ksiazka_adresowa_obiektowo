@@ -4,9 +4,12 @@
 5|3|Ewa|Cisek|999333666|ewa@cisek.pl|ul. Cisowa 4|
 6|3|Ewa|Nowak|333000987|ewa@nowak.pl|ul. Nowa 1|
 7|3|Karolina|Osa|123455432|kar@osa.pl|ul. Osa 3|
-8|3|Jan|Nowak|333444|nowak@nowak.pl|ul. Nowa 3|
+8|3|Jan|Nowak|555555555|nowak@nowak.pl|ul. Nowa 3|
 9|3|Jola|Nowa|888|nowa@nowa.pl|nowy|
 14|6|Nowy|Adresat|333|eee|eee|
-15|3|Stas|Stas|3dd|d|d|
 17|4|Jacek|2|2|2|2|
 18|1|Ola|2|2|2|2|
+19|2|Jan|Nowak|5|5|5|
+20|2|Jan|Nowy|3|3|3|
+21|1|Ola|Hhh|4|g|g|
+22|13|Karol|Kk|3|g|g|

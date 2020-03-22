@@ -28,7 +28,7 @@ int main()
         case '9':
             exit(0);
             break;
-        default:
+       default:
             cout<<endl<<"Nie ma takiej opcji w menu"<<endl;
             system("pause");
             break;
@@ -42,10 +42,10 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                //wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-               // wyszukajAdresatowPoNazwisku(adresaci);
+               ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
@@ -61,7 +61,6 @@ int main()
                 break;
             case '8':
                 ksiazkaAdresowa.wylogowanieUzytkownika();
-                //adresaci.clear();
                 break;
             }
 

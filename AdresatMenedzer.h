@@ -41,6 +41,10 @@ public:
     void usunAdresata();
 
     void edytujAdresata();
+
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 };
 
  #endif
