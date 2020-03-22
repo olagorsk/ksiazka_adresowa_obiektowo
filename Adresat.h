@@ -1,15 +1,13 @@
 #ifndef ADRESAT_H
 #define ADRESAT_H
 
-
 #include <iostream>
-
 
 using namespace std;
 
 class Adresat
 {
-    public:
+public:
     int id, idUzytkownika;
     string imie, nazwisko, numerTelefonu, email, adres;
 
@@ -26,14 +24,11 @@ public:
 
     int pobierzId();
     int pobierzIdUzytkownika();
-   string pobierzImie();
+    string pobierzImie();
     string pobierzNazwisko();
     string pobierzNumerTelefonu();
     string pobierzEmail();
     string pobierzAdres();
-
-
-
 };
 
- #endif
+#endif

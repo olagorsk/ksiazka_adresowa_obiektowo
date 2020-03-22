@@ -23,12 +23,9 @@ class UzytkownikMenedzer
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
-
 public:
-
     UzytkownikMenedzer(string nazwaPlikuZZuytkownikami): plikZUzytkownikami(nazwaPlikuZZuytkownikami)
     {
         idZalogowanegoUzytkownika = 0;
@@ -42,6 +39,5 @@ public:
     int wylogowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     bool czyUzytkownikJestZalogowany();
-
 };
 #endif

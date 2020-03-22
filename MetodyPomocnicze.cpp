@@ -1,7 +1,5 @@
 #include "MetodyPomocnicze.h"
 
-
-
 string MetodyPomocnicze::konwerjsaIntNaString(int liczba)
 {
     ostringstream ss;
@@ -16,7 +14,6 @@ string MetodyPomocnicze::wczytajLinie()
     getline(cin, wejscie);
     return wejscie;
 }
-
 
 string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
 {
@@ -44,6 +41,7 @@ char MetodyPomocnicze::wczytajZnak()
 
     while (true)
     {
+        cin.sync();
         getline (cin, wejscie);
         {
             znak = wejscie[0];
@@ -61,14 +59,13 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
 
     while (true)
     {
-          getline (cin, wejscie);
 
-          stringstream myStream (wejscie);
-          if (myStream>>liczba)
-              return liczba;
-              else
-              cout<<"To nie jest liczba. Wpisz ponownie"<<endl;
+        getline (cin, wejscie);
 
+        stringstream myStream (wejscie);
+        if (myStream>>liczba)
+            return liczba;
+        else
+            cout<<"To nie jest liczba. Wpisz ponownie"<<endl;
     }
 }
-

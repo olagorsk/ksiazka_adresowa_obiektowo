@@ -23,7 +23,8 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
         cout << "Podaj login: ";
         cin>> login;
         uzytkownik.ustawLogin(login);
-    } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
+    }
+    while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
     string haslo;
     cout << "Podaj haslo: ";
     cin>>haslo;
@@ -56,23 +57,23 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
-      for (int i=0; i<uzytkownicy.size(); i++)
+    for (int i=0; i<uzytkownicy.size(); i++)
     {
-       cout<<uzytkownicy[i].pobierzLogin()<<endl;
-       cout<<uzytkownicy[i].pobierzHaslo()<<endl;
-       cout<<uzytkownicy[i].pobierzId()<<endl;
+        cout<<uzytkownicy[i].pobierzLogin()<<endl;
+        cout<<uzytkownicy[i].pobierzHaslo()<<endl;
+        cout<<uzytkownicy[i].pobierzId()<<endl;
     }
 }
 
 
 int UzytkownikMenedzer::logowanieUzytkownika()
 {
-   string login = "", haslo = "";
+    string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-  login = MetodyPomocnicze::wczytajLinie();
+    login = MetodyPomocnicze::wczytajLinie();
 
-for (int i=0; i<uzytkownicy.size(); ++i)
+    for (int i=0; i<uzytkownicy.size(); ++i)
     {
         if (uzytkownicy[i].pobierzLogin() == login)
         {
@@ -98,9 +99,9 @@ for (int i=0; i<uzytkownicy.size(); ++i)
     return 0;
 }
 
- void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
- {
-     string noweHaslo = "";
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
+{
+    string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
     noweHaslo = MetodyPomocnicze::wczytajLinie();
 
@@ -108,31 +109,31 @@ for (int i=0; i<uzytkownicy.size(); ++i)
     {
         if (uzytkownicy[i].pobierzId() == idZalogowanegoUzytkownika)
         {
-           uzytkownicy[i].ustawHaslo(noweHaslo);
+            uzytkownicy[i].ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
- }
+}
 
- int UzytkownikMenedzer::wylogowanieUzytkownika()
- {
-     idZalogowanegoUzytkownika = 0;
-     cout<<endl<<"Wylogowales sie"<<endl;
-      system("pause");
-return idZalogowanegoUzytkownika;
- }
+int UzytkownikMenedzer::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    cout<<endl<<"Wylogowales sie"<<endl;
+    system("pause");
+    return idZalogowanegoUzytkownika;
+}
 
- bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
- {
-     if(idZalogowanegoUzytkownika>0)
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if(idZalogowanegoUzytkownika>0)
         return true;
-     else return false;
- }
+    else
+        return false;
+}
 
-   int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
-   {
-       return idZalogowanegoUzytkownika;
-   }
-
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}

@@ -6,14 +6,11 @@
 #include "UzytkownikMenedzer.h"
 #include "AdresatMenedzer.h"
 
-
-
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer *adresatMenedzer;
     const string NAZWA_PLIKU_Z_ADRESATAMI;
-
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytwkonikami, string nazwaPlikuZAdresatami)
@@ -26,7 +23,6 @@ public:
         delete adresatMenedzer;
         adresatMenedzer = NULL;
     }
-
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();

@@ -142,7 +142,7 @@ int AdresatMenedzer::podajIdWybranegoAdresata()
 
 void AdresatMenedzer::edytujAdresata()
 {
-     system("cls");
+    system("cls");
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
     int numerLiniiEdytowanegoAdresata = 0;
@@ -173,22 +173,22 @@ void AdresatMenedzer::edytujAdresata()
                 cout << "Podaj nowe nazwisko: ";
                 adresaci[i].nazwisko = MetodyPomocnicze::wczytajLinie();
                 adresaci[i].nazwisko = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].nazwisko);
-                  plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 adresaci[i].numerTelefonu = MetodyPomocnicze::wczytajLinie();
-                 plikZAdresatami. zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami. zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 adresaci[i].email = MetodyPomocnicze::wczytajLinie();
-                  plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 adresaci[i].adres = MetodyPomocnicze::wczytajLinie();
-                  plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
@@ -204,13 +204,11 @@ void AdresatMenedzer::edytujAdresata()
         cout << endl << "Nie ma takiego adresata." << endl << endl;
     }
     system("pause");
-
-
 }
 
 
- void AdresatMenedzer::wyszukajAdresatowPoImieniu()
- {
+void AdresatMenedzer::wyszukajAdresatowPoImieniu()
+{
     string imiePoszukiwanegoAdresata = "";
     int iloscAdresatow = 0;
 
@@ -243,7 +241,7 @@ void AdresatMenedzer::edytujAdresata()
 
 void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
 {
-     string nazwiskoPoszukiwanegoAdresata;
+    string nazwiskoPoszukiwanegoAdresata;
     int iloscAdresatow = 0;
 
     system("cls");
@@ -263,7 +261,7 @@ void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
                 iloscAdresatow++;
             }
         }
-         wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+        wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
     }
     else
     {
@@ -273,8 +271,6 @@ void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
     system("pause");
 }
 
-
-
 void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
 {
     if (iloscAdresatow == 0)
@@ -282,7 +278,6 @@ void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
     else
         cout << endl << "Ilosc adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
 }
-
 
 char AdresatMenedzer::wybierzOpcjeZMenuEdycja()
 {
