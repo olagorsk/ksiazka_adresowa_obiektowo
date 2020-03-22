@@ -3,7 +3,7 @@
 using namespace std;
 
 
-bool PlikZUzytkownikami::czyPlikZUzytkownikamiJestPusty(fstream &plikTekstowy)
+bool PlikZUzytkownikami::czyPlikJestPusty(fstream &plikTekstowy)
 {
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
@@ -15,7 +15,7 @@ bool PlikZUzytkownikami::czyPlikZUzytkownikamiJestPusty(fstream &plikTekstowy)
 
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
-     fstream plikTekstowy;
+    fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
     plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::app);
 
@@ -23,13 +23,13 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
     {
         liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownik);
 
-        if (czyPlikZUzytkownikamiJestPusty(plikTekstowy) == true)
+        if (czyPlikJestPusty(plikTekstowy) == true)
         {
             plikTekstowy << liniaZDanymiUzytkownika;
         }
         else
-       {
-           plikTekstowy << endl << liniaZDanymiUzytkownika ;
+        {
+            plikTekstowy << endl << liniaZDanymiUzytkownika ;
         }
     }
     else
@@ -48,11 +48,11 @@ string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowym
     return liniaZDanymiUzytkownika;
 }
 
- vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
+vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
 {
-     fstream plikTekstowy;
-      Uzytkownik uzytkownik;
-      vector <Uzytkownik> uzytkownicy;
+    fstream plikTekstowy;
+    Uzytkownik uzytkownik;
+    vector <Uzytkownik> uzytkownicy;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
 
     plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::in);
@@ -66,8 +66,8 @@ string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowym
         }
 
     }
-   plikTekstowy.close();
-   return uzytkownicy;
+    plikTekstowy.close();
+    return uzytkownicy;
 }
 
 Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
@@ -103,7 +103,7 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
     return uzytkownik;
 }
 
- void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy)
+void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy)
 {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
@@ -119,7 +119,7 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
 
             if (itr == itrKoniec)
             {
-               plikTekstowy << liniaZDanymiUzytkownika;
+                plikTekstowy << liniaZDanymiUzytkownika;
             }
             else
             {

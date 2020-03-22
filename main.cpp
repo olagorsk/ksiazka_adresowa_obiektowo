@@ -28,7 +28,7 @@ int main()
         case '9':
             exit(0);
             break;
-        default:
+       default:
             cout<<endl<<"Nie ma takiej opcji w menu"<<endl;
             system("pause");
             break;
@@ -42,37 +42,31 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                //wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-               // wyszukajAdresatowPoNazwisku(adresaci);
+               ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '5':
-               // idUsunietegoAdresata = usunAdresata(adresaci);
-               // idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+               ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-              //  edytujAdresata(adresaci);
+              ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 ksiazkaAdresowa.wylogowanieUzytkownika();
-                //adresaci.clear();
                 break;
             }
 
     }
     }
-
-   // ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-   // ksiazkaAdresowa.logowanieUzytkownika();
-
-
     return 0;
 }
+
+

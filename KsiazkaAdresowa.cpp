@@ -50,6 +50,26 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
     uzytkownikMenedzer.czyUzytkownikJestZalogowany();
 }
 
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer->usunAdresata();
+}
+
+ void KsiazkaAdresowa::edytujAdresata()
+ {
+     adresatMenedzer->edytujAdresata();
+ }
+
+ void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    adresatMenedzer->wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    adresatMenedzer->wyszukajAdresatowPoNazwisku();
+}
+
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     char wybor;

@@ -9,7 +9,7 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
     uzytkownicy.push_back(uzytkownik);
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
 
-    cout << endl << "Konto zalozono pomyslnie" << endl << endl;
+    cout << endl << "Konto zalozono pomyslnie" << endl;
     system("pause");
 }
 

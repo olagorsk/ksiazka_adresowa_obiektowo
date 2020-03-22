@@ -22,6 +22,10 @@ class AdresatMenedzer
 
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     void wyswietlDaneAdresata(Adresat adresat);
+    int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
+
+
 
 public:
 
@@ -34,7 +38,13 @@ public:
 
     void wyswietlWszystkichAdresatow();
 
+    void usunAdresata();
 
+    void edytujAdresata();
+
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 };
 
  #endif

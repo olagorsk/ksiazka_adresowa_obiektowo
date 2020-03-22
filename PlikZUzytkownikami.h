@@ -17,10 +17,10 @@ class PlikZUzytkownikami
 {
     const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
 
-    bool czyPlikJestPusty(fstream plikTekstowy);
+    bool czyPlikJestPusty(fstream &plikTekstowy);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
      Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-     bool czyPlikZUzytkownikamiJestPusty(fstream &plikTekstowy);
+    // bool czyPlikZUzytkownikamiJestPusty(fstream &plikTekstowy);
 public:
 
     PlikZUzytkownikami(string nazwaPlikuZUzytkownikami): NAZWA_PLIKU_Z_UZYTKOWNIKAMI(nazwaPlikuZUzytkownikami){};
