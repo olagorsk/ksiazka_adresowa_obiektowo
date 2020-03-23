@@ -176,6 +176,7 @@ void PlikZAdresatami::usunAdresataZPliku(int idAdresata)
     fstream plikTekstowy, tymczasowyPlikTekstowy;
     int numerUsuwanejLinii = 0;
     string nazwaTymczasowegoPliku = "Adresaci_temp.txt";
+    int tempIDAdresata = 0;
 
     plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
     tymczasowyPlikTekstowy.open(nazwaTymczasowegoPliku.c_str(), ios::out | ios::app);
@@ -188,6 +189,7 @@ void PlikZAdresatami::usunAdresataZPliku(int idAdresata)
             {
                 czyIstniejeAdresat = true;
                 numerUsuwanejLinii = numerLiniiWPlikuTekstowym;
+
             }
             else  if (numerLiniiWPlikuTekstowym == 1 && numerLiniiWPlikuTekstowym != numerUsuwanejLinii)
                 tymczasowyPlikTekstowy << daneJednegoAdresataOddzielonePionowymiKreskami;
@@ -197,8 +199,11 @@ void PlikZAdresatami::usunAdresataZPliku(int idAdresata)
                 tymczasowyPlikTekstowy << endl << daneJednegoAdresataOddzielonePionowymiKreskami;
             else if (numerLiniiWPlikuTekstowym > 1 && numerUsuwanejLinii != 1)
                 tymczasowyPlikTekstowy << endl << daneJednegoAdresataOddzielonePionowymiKreskami;
+            if (numerUsuwanejLinii!=numerLiniiWPlikuTekstowym)
+                idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami);
 
             numerLiniiWPlikuTekstowym++;
+
         }
         if (czyIstniejeAdresat = false)
         {
